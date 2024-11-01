@@ -1,46 +1,41 @@
-# Struktur Pohon Biner dalam C++
+# Program Linked List dengan C++
 
-Kode berikut menunjukkan bagaimana cara membuat dan menghubungkan node dalam sebuah pohon biner menggunakan bahasa pemrograman C++.
+Program ini mengimplementasikan struktur data Linked List sederhana menggunakan C++ dengan elemen bertipe `char`. Program ini mendemonstrasikan beberapa operasi dasar pada Linked List, seperti menambah elemen di depan, belakang, menyisipkan di tengah, serta menghapus elemen dari depan dan belakang. 
 
-## Kode Sumber
+## Fitur Program:
+- **Tambah Depan**: Menambah elemen di awal Linked List.
+- **Tambah Belakang**: Menambah elemen di akhir Linked List.
+- **Tambah Tengah**: Menyisipkan elemen di tengah Linked List.
+- **Hapus Depan**: Menghapus elemen pertama dari Linked List.
+- **Hapus Belakang**: Menghapus elemen terakhir dari Linked List.
+- **Tampilkan Linked List**: Menampilkan isi dari Linked List.
 
-```cpp
-#include <iostream>
-using namespace std;
+## Struktur Program:
+1. **Struct pnt**:
+   - `char data`: Menyimpan data karakter.
+   - `pnt* next`: Pointer ke elemen selanjutnya dalam Linked List.
+   
+2. **Variabel Utama**:
+   - `kpl`: Pointer ke elemen pertama (kepala) dari Linked List.
+   - `ekor`: Pointer ke elemen terakhir (ekor) dari Linked List.
+   - `baru`: Digunakan untuk node baru yang akan ditambahkan ke Linked List.
 
-struct pnt {
-    char data;
-    pnt* left;   // Cabang kiri
-    pnt* right;  // Cabang kanan
-};
+3. **Fungsi-Fungsi Utama**:
+   - `tambahDepan`: Menambahkan elemen baru di awal Linked List.
+   - `tambahBelakang`: Menambahkan elemen baru di akhir Linked List.
+   - `tambahTengah`: Menyisipkan elemen baru di tengah Linked List.
+   - `hapusDepan`: Menghapus elemen pertama dari Linked List.
+   - `hapusBelakang`: Menghapus elemen terakhir dari Linked List.
+   - `tampilkanList`: Menampilkan seluruh elemen dari awal hingga akhir.
 
-int main() {
-    // Alokasi memori untuk node root (kepala)
-    pnt* kpl = new pnt;
-    kpl->data = 'a';     // Isi data root dengan 'a'
-    kpl->left = nullptr; // Set left dan right menjadi null
-    kpl->right = nullptr;
+## Contoh Output:
+Data kpl: A
+Data ekor: A
+Isi linked list: C A D B 
+Isi linked list setelah hapus depan dan belakang: A D
 
-    // Node tengah dengan data 'C'
-    pnt* tengah = new pnt;
-    tengah->data = 'C';   // Isi data node tengah dengan 'C'
-    tengah->left = nullptr;
-    tengah->right = nullptr;
+## Cara Menggunakan:
+1. Kompilasi program menggunakan compiler C++: g++ -o linked_list linked_list.cpp
+2. Jalankan program: ./linked_list
 
-    // Node baru dengan data 'B'
-    pnt* baru = new pnt;
-    baru->data = 'B';     // Isi data node baru dengan 'B'
-    baru->left = nullptr;
-    baru->right = nullptr;
-
-    // Menghubungkan node untuk membentuk pohon biner
-    kpl->left = tengah;  // Tengah berada di cabang kiri root
-    kpl->right = baru;   // Baru berada di cabang kanan root
-
-    // Menampilkan data dari setiap node di pohon biner
-    cout << "Root: " << kpl->data << endl;
-    cout << "Left Child of Root: " << kpl->left->data << endl;
-    cout << "Right Child of Root: " << kpl->right->data << endl;
-
-    return 0;
-}
+Program ini cocok untuk mempelajari konsep dasar Linked List dan manipulasi pointer dalam C++.
