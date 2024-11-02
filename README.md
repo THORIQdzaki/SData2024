@@ -5,7 +5,7 @@ Program ini mengimplementasikan struktur data Linked List sederhana menggunakan 
 ## Fitur Program:
 - **Tambah Depan**: Menambah elemen di awal Linked List.
 - **Tambah Belakang**: Menambah elemen di akhir Linked List.
-- **Tambah Tengah**: Menyisipkan elemen di tengah Linked List.
+- **Sisipan**: Menyisipkan elemen di tengah Linked List.
 - **Hapus Depan**: Menghapus elemen pertama dari Linked List.
 - **Hapus Belakang**: Menghapus elemen terakhir dari Linked List.
 - **Tampilkan Linked List**: Menampilkan isi dari Linked List.
@@ -23,7 +23,7 @@ Program ini mengimplementasikan struktur data Linked List sederhana menggunakan 
 3. **Fungsi-Fungsi Utama**:
    - `tambahDepan`: Menambahkan elemen baru di awal Linked List.
    - `tambahBelakang`: Menambahkan elemen baru di akhir Linked List.
-   - `tambahTengah`: Menyisipkan elemen baru di tengah Linked List.
+   - `sisipan`: Menyisipkan elemen baru di tengah Linked List.
    - `hapusDepan`: Menghapus elemen pertama dari Linked List.
    - `hapusBelakang`: Menghapus elemen terakhir dari Linked List.
    - `tampilkanList`: Menampilkan seluruh elemen dari awal hingga akhir.
