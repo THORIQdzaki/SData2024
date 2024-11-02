@@ -25,7 +25,7 @@ void tambahBelakang(pnt*& ekor, char dataBaru) {
 }
 
 // Fungsi untuk menyisipkan data di tengah
-void tambahTengah(pnt* kpl, char dataBaru) {
+void sisipan(pnt* kpl, char dataBaru) {
     pnt* baru = new pnt();
     baru->data = dataBaru;
     baru->next = kpl->next;
@@ -89,7 +89,7 @@ int main() {
     tambahDepan(kpl, 'C');
     
     // Sisip data D di tengah
-    tambahTengah(kpl->next, 'D'); // Sisip setelah elemen pertama
+    sisipan(kpl->next, 'D'); // Sisip setelah elemen pertama
     
     // Tampilkan isi linked list
     cout << "Isi linked list: ";
