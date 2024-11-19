@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+
+int A[10];
+int top = -1;
+
+void push (int i) {
+  A[top] = i;
+  top = top + 1;
+}
+
+void pop {
+  A[top] = 1;
+
+}
