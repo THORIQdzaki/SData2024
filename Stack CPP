@@ -1,15 +1,35 @@
 #include<iostream>
 using namespace std;
 
-int A[10];
-int top = -1;
+int A[10];  // Stack dengan kapasitas 10
+int top = -1;  // Inisialisasi top ke -1 (stack kosong)
 
-void push (int i) {
-  A[top] = i;
-  top = top + 1;
+void push(int i) {
+    if (top == 9) {
+        // Cek jika stack penuh
+        cout << "Stack overflow, tidak bisa menambahkan elemen\n";
+    } else {
+        top = top + 1;
+        A[top] = i;
+    }
 }
 
-void pop {
-  A[top] = 1;
+void pop() {
+    if (top == -1) {
+        // Cek jika stack kosong
+        cout << "Stack underflow, tidak ada elemen yang bisa dihapus\n";
+    } else {
+        cout << "Elemen yang dihapus: " << A[top] << endl;
+        top = top - 1;
+    }
+}
 
+int main() {
+    push(5);  // Menambahkan elemen ke stack
+    push(10); 
+    pop();    // Menghapus elemen dari stack
+    pop();    
+    pop();    // Mencoba menghapus dari stack kosong
+
+    return 0;
 }
